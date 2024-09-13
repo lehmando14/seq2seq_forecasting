@@ -1,0 +1,9 @@
+_data/**/*.csv
+_data/**/*.npy
+_data/**/*.pt
+
+_model_evaluations/**/*.pt
+
+_model_evaluations_auto_10/**/*.pt
+_model_evaluations_auto_21/**/*.pt
+_model_evaluations_auto_52/**/*.pt
