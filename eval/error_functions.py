@@ -29,3 +29,14 @@ def print_errors(
     for func in error_functions:
         error = func(actual, forecast)
         print(f"{func.__name__}: {error}")
+
+def calc_errors(
+        actual: torch.Tensor, 
+        forecast: torch.Tensor, 
+        error_functions: List[Callable[[torch.Tensor, torch.Tensor], float]]=[calc_RMSE, calc_MAE, calc_MAPE]) -> None:
+    
+    errors = []
+    for func in error_functions:
+        errors.append(func(actual, forecast))
+
+    return errors
